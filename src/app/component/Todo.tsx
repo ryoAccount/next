@@ -1,6 +1,6 @@
 "use client"
 
-import { editTodo } from "@/api"
+import { deleteTodo, editTodo } from "@/api"
 import { Task } from "@/types"
 import React, { useEffect, useRef, useState } from "react"
 
@@ -17,13 +17,17 @@ const Todo = ({ todo}: TodoProps) => {
     if (isEditing) ref.current?.focus()
   }, [isEditing])
 
-  const handleEdit =async () => {
+  const handleEdit = async () => {
     setIsEditing(true)
   }
-  const handleSave =async () => {
+  const handleSave = async () => {
     await editTodo(todo.id, editTaskTitle)
     setIsEditing(false)
   }
+  const handleDelete = async () => {
+    await deleteTodo(todo.id)
+  } 
+
   return (
     <li key={todo.id} className='flex justify-between p-4 bg-white border-l-4 border-blue-500 rounded shadow'>
       
@@ -44,7 +48,7 @@ const Todo = ({ todo}: TodoProps) => {
           ? <button className='text-grey-500 mr-3' onClick={handleSave}>save</button>
           : <button className='text-green-500 mr-3' onClick={handleEdit}>edit</button>
         }
-        <button className='text-red-500'>delete</button>
+        <button className='text-red-500' onClick={handleDelete}>delete</button>
       </div>
     </li>
   )
