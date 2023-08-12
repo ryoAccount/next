@@ -15,3 +15,14 @@ export const addTodo = async (todo: Task): Promise<Task[]> => {
    }) 
   return res.json()
 }
+
+export const editTodo = async (id: string, newTask: string): Promise<Task[]> => {
+  const res = await fetch(`http://localhost:3001/tasks/${id}`, { 
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ text: newTask })
+   }) 
+  return res.json()
+}
