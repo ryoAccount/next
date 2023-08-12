@@ -35,6 +35,7 @@ const Todo = ({ todo}: TodoProps) => {
         ? <input 
             ref={ref} 
             type="text" 
+            maxLength={30}
             className="mr-2 py-1 px-2 rounded border-gray-400 border" 
             defaultValue={editTaskTitle} 
             onChange={
