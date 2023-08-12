@@ -34,5 +34,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-apiTestData
-/src/app/data/todo.json
+# apiTestData
+src/app/data/todo.json
