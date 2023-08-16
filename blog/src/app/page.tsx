@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { client } from "../../libs/client";
 import styles from './page.module.css'
 
@@ -13,12 +14,22 @@ import styles from './page.module.css'
 //   }
 // }
 
-export default function Home({ blog }) {
+type Blog = {
+  id: string
+  title: string
+  body: string
+}
+
+export default async function Home() {
+  const data = await client.get({ endpoint: "blog"})
+  const blogs = data.contents as Blog[]
   return (
-    <div>
-      { blog.map((blog) => (
+    <div className={styles.container}>
+      { blogs.map((blog) => (
         <li key={blog.id}>
-          <a href="">{blog.title}</a>
+          <Link href={`blog/${blog.id}`}>
+            {blog.title}
+          </Link>
         </li>
       ))}
     </div>
