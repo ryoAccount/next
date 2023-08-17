@@ -1,4 +1,5 @@
 import { client } from "@/libs/client"
+import { BlogProps } from "@/libs/type"
 import styles from "@/styles/Home.module.css"
 
 // SSG
@@ -6,7 +7,7 @@ export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "blog" })
   return {
     props: {
-      blogs: data.contents
+      blogs: data.contents as BlogProps[]
     }
   }
 }
