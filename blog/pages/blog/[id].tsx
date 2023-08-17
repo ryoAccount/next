@@ -1,13 +1,14 @@
 import { client } from "@/libs/client"
+import { BlogProps, ContextProps } from "@/libs/type"
 
 // SSG
-export const getStaticProps = async ( context ) => {
+export const getStaticProps = async ( context: ContextProps ) => {
   const id = context.params.id
   const data = await client.get({ endpoint: "blog", contentId: id })
 
   return {
     props: {
-      blog: data
+      blog: data as BlogProps
     }
   }
 }
