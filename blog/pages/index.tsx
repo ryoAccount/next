@@ -2,7 +2,7 @@ import { client } from "@/libs/client"
 import styles from "@/styles/Home.module.css"
 
 // SSG
-export const getStaticProps =async () => {
+export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "blog" })
   return {
     props: {
