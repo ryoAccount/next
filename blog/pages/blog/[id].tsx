@@ -16,7 +16,7 @@ export const getStaticProps = async ( context: ContextProps ) => {
 
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "blog" })
-  const paths = data.contents.map((content: any) => `/blog/${content.id}`)
+  const paths = data.contents.map((content) => `/blog/${content.id}`)
   return {
     paths,
     fallback: false
