@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import HeaderData from './header'
+import FooterData from './footer'
 
 export default function Document() {
   return (
@@ -10,6 +11,7 @@ export default function Document() {
       <body>
         <HeaderData />
         <Main />
+        <FooterData />
         <NextScript />
       </body>
     </Html>

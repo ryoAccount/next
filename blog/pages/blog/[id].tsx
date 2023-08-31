@@ -29,6 +29,9 @@ export default function BlogId({ blog }) {
       <h1 className={styles.title}>{blog.title}</h1>
       <p className={styles.publishedAt}>{blog.publishedAt}</p>
       <div className={styles.post} dangerouslySetInnerHTML={{__html: blog.body}}></div>
+      <div>
+        <a href="../">go to Top</a>
+      </div>
     </main>
   )
 }

@@ -34,7 +34,25 @@ export default function Home({ contents, totalCount }) {
             ))}
           </dl>
         </div>
-        <p>{totalCount}</p>
+        <p className="totalCount">{totalCount} posts so far.</p>
+      </article>
+
+      <article>
+        <h2>about</h2>
+        <div>
+          <p>This is a blog where I tweet when busy, when having a hard time, when having fun, when moved, or when I want to express my feelings in words.</p>
+          <p>The site name is Monologue because it means something like a whisper, not something you send to someone.</p>
+        </div>
+        <h5>About link</h5>
+        <div>
+          <dl className="inline">
+            <dt>site name</dt>
+              <dd>Monologue</dd>
+            <dt>url</dt>
+              <dd><a href="https://blog-ryocv.vercel.app/">https://blog-ryocv.vercel.app/</a></dd>
+          </dl>
+        </div>
+
       </article>
     </main>
   )
