@@ -82,6 +82,8 @@ form:last-child {
 
 img {
   vertical-align: middle;
+  width: 80%;
+  height: auto;
 }
 
 @media only screen and (max-width: 900px) {
@@ -217,7 +219,7 @@ h2::before {
   content: "";
   position: absolute;
   display: block;
-  width: 300px;
+  width: 480px;
   height: 40px;
   margin-left: -5px;
   border: 1px solid #8ebde6;
@@ -534,4 +536,5 @@ td {
 
 figure {
   text-align: center;
+  margin: 40px;
 }
