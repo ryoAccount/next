@@ -1,6 +1,7 @@
 import { client } from "@/libs/client"
 import { BlogProps, ContextProps } from "@/libs/type"
 import styles from "../../styles/id.module.scss"
+import { dateFormat } from "../../util/date";
 
 // SSG
 export const getStaticProps = async ( context: ContextProps ) => {
@@ -24,10 +25,6 @@ export const getStaticPaths = async () => {
 }
 
 export default function BlogId({ blog }) {
-  const dateFormat = (publishedAt: string) => {
-    return new Date(publishedAt).toLocaleDateString()
-  }
-
   return (
     <main>
       <h1 className={styles.blogTitle}>{blog.title}</h1>

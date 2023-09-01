@@ -82,6 +82,8 @@ form:last-child {
 
 img {
   vertical-align: middle;
+  width: 80%;
+  height: auto;
 }
 
 @media only screen and (max-width: 900px) {
@@ -178,155 +180,6 @@ a:hover {
   color: #b866b1;
 }
 
-/* メニュー */
-.menu {
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 500;
-}
-
-.menu ul {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.menu ul li {
-  margin: 2px 7px;
-}
-
-.menu a {
-  display: block;
-  min-width: auto;
-  padding: 0 7px;
-  color: #dcc6ab;
-  border: 1px solid transparent;
-}
-
-.menu a:hover {
-  border-color: #dcc6ab;
-}
-
-.manu-toggler {
-  display: none;
-}
-
-.fixed-menu {
-  position: fixed;
-  bottom: 49px;
-  right: 49px;
-}
-
-.fixed-menu ul {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.fixed-menu a,
-.fixed-menu button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: #4a8ac7 !important;
-  color: #fff !important;
-}
-
-.fixed-menu a::before,
-.fixed-menu button::before {
-  font: 900 16px/1 "Font Awesome 5 Free";
-}
-
-.fixed-menu a:hover,
-.fixed-menu button:hover {
-  opacity: 0.5;
-}
-
-.fixed-menu .pagetop a::before,
-.fixed-menu .pagetop button::before {
-  content: "\f106";
-}
-
-.fixed-menu .prev a::before,
-.fixed-menu .prev button::before {
-  content: "\f104";
-}
-
-.fixed-menu .next::before {
-  content: none;
-}
-
-.fixed-menu .next a::before,
-.fixed-menu .next button::before {
-  content: "\f105";
-}
-
-.fixed-menu .toc a::before,
-.fixed-menu .toc button::before {
-  content: "\f0ca";
-}
-
-.fixed-menu .home a::before,
-.fixed-menu .home button::before {
-  content: "\f015";
-}
-
-@media only screen and (max-width: 900px) {
-  .menu {
-    display: none;
-    padding: 7px 0;
-    border: 1px solid #dcc6ab;
-  }
-  .menu ul {
-    margin: 0;
-    flex-wrap: wrap;
-  }
-  .menu ul li {
-    width: 100%;
-  }
-  .menu a {
-    display: block;
-  }
-  .manu-toggler {
-    display: block;
-    width: 40px;
-    height: 40px;
-    padding: 6px;
-    background: #dcc6ab;
-  }
-  .manu-toggler::after {
-    content: "";
-    display: block;
-    width: 26px;
-    height: 1px;
-    border: 1px solid #fff;
-    transform: rotate(340deg);
-  }
-  .manu-toggler.open::after {
-    content: "";
-    display: block;
-    width: 26px;
-    height: 26px;
-    border: 1px solid #fff;
-    transform: rotate(0);
-  }
-  .fixed-menu {
-    bottom: 60px;
-    right: 50px;
-  }
-  .fixed-menu ul {
-    flex-direction: row;
-  }
-}
-
 /* 見出し */
 h1 {
   margin: 0;
@@ -366,7 +219,7 @@ h2::before {
   content: "";
   position: absolute;
   display: block;
-  width: 300px;
+  width: 480px;
   height: 40px;
   margin-left: -5px;
   border: 1px solid #8ebde6;
@@ -514,88 +367,6 @@ dl.border {
   border-radius: 4px;
 }
 
-/* フォーム */
-.form-inline > *,
-.form-block > * {
-  margin-bottom: 5px;
-}
-
-.form-block dl dt,
-.form-block dl dd {
-  border-bottom: 0;
-}
-
-.form-block dl.inline dt {
-  width: 130px;
-}
-
-.form-block dl.inline dd {
-  width: calc(100% - 130px);
-}
-
-.form-block > *,
-.form-block dl dd > * {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.required::after {
-  content: "*";
-  color: #b866b1;
-}
-
-input,
-textarea,
-select,
-button:not(.manu-toggler),
-input[type="submit"],
-input[type="button"] {
-  border-radius: 4px;
-}
-
-input::placeholder,
-textarea::placeholder,
-select::placeholder,
-button:not(.manu-toggler)::placeholder,
-input[type="submit"]::placeholder,
-input[type="button"]::placeholder {
-  color: #dcc6ab;
-}
-
-input,
-textarea,
-select {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: 1px solid #dcc6ab;
-  box-sizing: border-box;
-  background: transparent;
-}
-
-input:hover,
-input:focus,
-textarea:hover,
-textarea:focus,
-select:hover,
-select:focus {
-  border: 1px solid #ac9c8c;
-}
-
-button:not(.manu-toggler),
-input[type="submit"],
-input[type="button"] {
-  background: #dcc6ab;
-  border: 1px solid #dcc6ab;
-  color: #fff;
-}
-
-button:not(.manu-toggler):hover,
-input[type="submit"]:hover,
-input[type="button"]:hover {
-  border: 1px solid #ac9c8c;
-  background: #ac9c8c;
-}
-
 /* 装飾 */
 b,
 em,
@@ -647,125 +418,6 @@ hr::before {
   font-size: smaller;
 }
 
-.area.area-diary.deco-border > div,
-.area.area-diary.deco-bg > div {
-  padding: 15px 20px;
-  border-radius: 4px;
-}
-
-.area.area-diary.deco-border > div:not(:last-child)::after,
-.area.area-diary.deco-bg > div:not(:last-child)::after {
-  content: none;
-}
-
-.area.area-diary.deco-border > div {
-  border: 1px solid #c4dbf0;
-}
-
-.area.area-diary.deco-bg > div {
-  background: #e8ebf4;
-}
-
-.area.area-diary > div {
-  margin-bottom: 30px;
-  padding: 15px 0;
-}
-
-.area.area-diary > div:not(:last-child)::after {
-  content: "";
-  display: block;
-  height: 1px;
-  margin: 45px 0 0;
-  border-bottom: 1px dashed #ddd;
-}
-
-.area.area-diary > div hr {
-  border: 0;
-  height: 1px;
-  background: #c4dbf0;
-}
-
-.area.area-diary > div hr::before {
-  content: none;
-}
-
-.area.area-diary .title {
-  font-weight: 600;
-}
-
-.area.area-diary .date {
-  text-align: right;
-  font-size: 1.2rem;
-}
-
-.area.area-diary .date::before {
-  content: "\f017";
-  margin-right: 3px;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 500;
-}
-
-.area.area-diary .more input[type="checkbox"],
-.area.area-diary .more input[type="radio"] {
-  display: none;
-}
-
-.area.area-diary .more input[type="checkbox"] + label,
-.area.area-diary .more input[type="radio"] + label {
-  display: block;
-  text-align: center;
-  color: #4a8ac7;
-  cursor: pointer;
-}
-
-.area.area-diary .more input[type="checkbox"] + label::before,
-.area.area-diary .more input[type="radio"] + label::before {
-  content: "\f0d7 more";
-  margin: 0 5px;
-  font: 900 1.2rem/1 "Font Awesome 5 Free", "Yu Gothic", Meiryo, "Hiragino Kaku Gothic ProN", sans-serif;
-}
-
-.area.area-diary .more input[type="checkbox"] + label + *,
-.area.area-diary .more input[type="radio"] + label + * {
-  line-height: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s;
-}
-
-.area.area-diary .more input[type="checkbox"] + label + * *,
-.area.area-diary .more input[type="radio"] + label + * * {
-  transition: all 0.2s;
-}
-
-.area.area-diary .more input[type="checkbox"]:not(:checked) + label + * *,
-.area.area-diary .more input[type="radio"]:not(:checked) + label + * * {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  line-height: 0;
-}
-
-.area.area-diary .more input[type="checkbox"]:not(:checked) + label + * *::before,
-.area.area-diary .more input[type="checkbox"]:not(:checked) + label + * *::after,
-.area.area-diary .more input[type="radio"]:not(:checked) + label + * *::before,
-.area.area-diary .more input[type="radio"]:not(:checked) + label + * *::after {
-  content: none;
-}
-
-.area.area-diary .more input[type="checkbox"]:checked + label::before,
-.area.area-diary .more input[type="radio"]:checked + label::before {
-  content: "\f0d8 more";
-}
-
-.area.area-diary .more input[type="checkbox"]:checked + label + *,
-.area.area-diary .more input[type="radio"]:checked + label + * {
-  margin: 10px 0 20px;
-  line-height: 1.6;
-  opacity: 1;
-  visibility: visible;
-  transition: line-height 0.3s ease-out, opacity 0.1s linear 0.1s, visibility 0.1s linear 0.1s;
-}
-
 /* スマホ設定 */
 @media only screen and (max-width: 900px) {
   body,
@@ -813,33 +465,11 @@ hr::before {
     width: calc(100% - 40px);
     padding-left: 40px;
   }
-  /* フォーム */
-  .form-inline input {
-    width: 45%;
-  }
-  .form-block dl.inline dt {
-    width: 100%;
-    padding: 0;
-  }
-  .form-block dl.inline dd {
-    width: 100%;
-  }
-  .form-block > *,
-  .form-block dl dd > * {
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 5px;
-  }
 }
 /* ----- ▲ レイアウト　ここまで ▲ ----- */
 
 
 /* ----- ▼ ここからオリジナル ▼ ----- */
-.totalCount {
-  text-align: right;
-}
-
-/* ----- ▼ [id].tsx ▼ ----- */
 div > h1 {
   position: relative;
   display: flex;
@@ -906,5 +536,5 @@ td {
 
 figure {
   text-align: center;
-  
+  margin: 40px;
 }
