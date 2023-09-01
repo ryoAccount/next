@@ -1,6 +1,6 @@
 import { client } from "@/libs/client"
 import { BlogProps, ContextProps } from "@/libs/type"
-import styles from "../../styles/Home.module.scss";
+import styles from "../../styles/id.module.scss"
 
 // SSG
 export const getStaticProps = async ( context: ContextProps ) => {
@@ -24,12 +24,16 @@ export const getStaticPaths = async () => {
 }
 
 export default function BlogId({ blog }) {
+  const dateFormat = (publishedAt: string) => {
+    return new Date(publishedAt).toLocaleDateString()
+  }
+
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>{blog.title}</h1>
-      <p className={styles.publishedAt}>{blog.publishedAt}</p>
-      <div className={styles.post} dangerouslySetInnerHTML={{__html: blog.body}}></div>
-      <div>
+    <main>
+      <h1 className={styles.blogTitle}>{blog.title}</h1>
+      <p className={styles.publishedAt}>{dateFormat(blog.publishedAt)}</p>
+      <div dangerouslySetInnerHTML={{__html: blog.body}}></div>
+      <div className={styles.goToTop}>
         <a href="../">go to Top</a>
       </div>
     </main>
