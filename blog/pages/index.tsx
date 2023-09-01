@@ -1,5 +1,7 @@
 import { client } from "@/libs/client"
 import { BlogProps } from "@/libs/type"
+import styles from "../styles/home.module.scss"
+import { dateFormat } from "../util/date";
 
 // SSG
 export const getStaticProps = async () => {
@@ -15,10 +17,6 @@ export const getStaticProps = async () => {
 }
 
 export default function Home({ contents, totalCount }) {
-  const dateFormat = (publishedAt: string) => {
-    return new Date(publishedAt).toLocaleDateString()
-  }
-
   return (
     <main>
       <article>
@@ -34,7 +32,7 @@ export default function Home({ contents, totalCount }) {
             ))}
           </dl>
         </div>
-        <p className="totalCount">{totalCount} posts so far.</p>
+        <p className={styles.totalCount}>{totalCount} posts so far.</p>
       </article>
 
       <article>
