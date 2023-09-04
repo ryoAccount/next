@@ -139,7 +139,7 @@ main,
 footer {
   max-width: 600px;
   margin: auto;
-  padding: 0 50px;
+  padding: 0 40px;
 }
 
 header {
@@ -211,17 +211,15 @@ h2 {
   align-items: center;
   margin: -100px auto 100px;
   padding-top: 180px;
-  padding-left: 5px;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 }
 
 h2::before {
   content: "";
   position: absolute;
   display: block;
-  width: 480px;
+  width: 100%;
   height: 40px;
-  margin-left: -5px;
   border: 1px solid #8ebde6;
   z-index: -1;
 }
@@ -262,6 +260,7 @@ h5 {
   font-weight: 400;
   color: #4a8ac7;
   text-align: center;
+  margin: 40px 0 0;
 }
 
 /* リスト */
@@ -337,7 +336,7 @@ dl.inline dt,
 dl.inline dd {
   vertical-align: top;
   margin: 0 0 15px 0;
-  padding: 0 0 15px;
+  padding: 0 0 4px;
 }
 
 dl.inline dt:last-of-type,
@@ -429,10 +428,7 @@ hr::before {
     content: none;
   }
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    display: block;
     padding-top: 25px;
     padding-bottom: 25px;
   }
