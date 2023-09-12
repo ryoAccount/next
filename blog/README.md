@@ -40,3 +40,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## tutorial
 
 https://www.youtube.com/watch?v=dNpONz4Yi04
+
+## blog
+
+https://blog-ryocv.vercel.app/
