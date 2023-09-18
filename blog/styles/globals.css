@@ -21,6 +21,7 @@ html {
 }
 
 a {
+  color: #c78fc2;
   text-decoration: none;
 }
 
@@ -58,6 +59,7 @@ select {
 input,
 textarea {
   box-shadow: none;
+  appearance: none;
   -webkit-appearance: none;
 }
 
@@ -82,7 +84,7 @@ form:last-child {
 
 img {
   vertical-align: middle;
-  width: 80%;
+  width: 100%;
   height: auto;
 }
 
@@ -152,28 +154,14 @@ header {
   z-index: 100;
 }
 
-main *:first-child,
-footer *:first-child {
-  margin-top: 0;
-}
-
 main *:first-child h2:first-child,
 footer *:first-child h2:first-child {
-  margin-top: -246px;
-}
-
-main *:first-child *:not(h2):first-child,
-footer *:first-child *:not(h2):first-child {
   margin-top: 0;
 }
 
 main {
   padding-top: 100px;
   padding-bottom: 150px;
-}
-
-a {
-  color: #c78fc2;
 }
 
 a:hover {
@@ -209,19 +197,10 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: -100px auto 100px;
-  padding-top: 180px;
+  margin: 100px auto 20px;
   letter-spacing: 2px;
-}
-
-h2::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 40px;
   border: 1px solid #8ebde6;
-  z-index: -1;
+  min-height: 40px;
 }
 
 h3::after,
@@ -260,7 +239,7 @@ h5 {
   font-weight: 400;
   color: #4a8ac7;
   text-align: center;
-  margin: 40px 0 0;
+  margin: 40px 0 20px;
 }
 
 /* リスト */
@@ -532,5 +511,5 @@ td {
 
 figure {
   text-align: center;
-  margin: 40px;
+  margin: 4px;
 }
