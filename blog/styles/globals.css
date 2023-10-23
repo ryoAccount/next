@@ -21,7 +21,7 @@ html {
 }
 
 a {
-  color: #c78fc2;
+  color: hotpink;
   text-decoration: none;
 }
 
@@ -105,7 +105,8 @@ img {
 body {
   margin: 0;
   padding: 0;
-  background: #f4f6fc;
+  background: rgb(50, 50, 50);
+  opacity: 0.85;
   width: 100%;
   position: relative;
 }
@@ -133,7 +134,7 @@ input,
 textarea,
 select {
   font: 500 1.4rem / calc(1.4rem + 1.05rem) "Yu Gothic", Meiryo, "Hiragino Kaku Gothic ProN", sans-serif;
-  color: #676965;
+  color: whitesmoke;
 }
 
 header,
@@ -149,8 +150,9 @@ header {
   top: 0;
   padding-top: 15px;
   padding-bottom: 15px;
+  border-bottom: 1px solid #8ebde6;
   text-align: center;
-  background: #f4f6fc;
+  background: rgb(50, 50, 50);
   z-index: 100;
 }
 
@@ -186,9 +188,9 @@ h1 a:hover {
 h2,
 h3,
 h4 {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.6rem;
-  color: #4a8ac7;
+  color: #8ebde6;
   text-align: center;
 }
 
@@ -358,7 +360,7 @@ em {
 }
 
 strong {
-  background: #dcc6ab;
+  text-decoration: underline #dcc6ab;
 }
 
 hr {
