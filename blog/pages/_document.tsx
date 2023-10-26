@@ -9,6 +9,7 @@ export default function Document() {
         <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&display=swap" rel="stylesheet" />
       </Head>
       <body>
+        <span id='bg-image'></span>
         <HeaderData />
         <Main />
         <FooterData />
